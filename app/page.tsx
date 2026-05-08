@@ -13,7 +13,7 @@ function HeroContent({ ready }: { ready: boolean }) {
     <div className="flex flex-col items-center justify-center transform -translate-y-[40px] md:-translate-y-[20px] px-6">
       <div className="overflow-hidden">
         <motion.h1
-          className="font-light leading-[1.05] tracking-[-0.04em] text-[clamp(42px,9vw,140px)]"
+          className="font-light leading-[1.05] tracking-[-0.04em] text-[clamp(42px,6vw,80px)]"
           initial={{ y: "110%" }}
           animate={ready ? { y: 0 } : { y: "110%" }}
           transition={{ duration: 1.2, ease: goldEase }}
@@ -23,7 +23,7 @@ function HeroContent({ ready }: { ready: boolean }) {
       </div>
       <div className="overflow-hidden mb-8">
         <motion.h1
-          className="font-light leading-[1.05] tracking-[-0.04em] text-[clamp(42px,9vw,140px)]"
+          className="font-light leading-[1.05] tracking-[-0.04em] text-[clamp(42px,6vw,80px)]"
           initial={{ y: "110%" }}
           animate={ready ? { y: 0 } : { y: "110%" }}
           transition={{ duration: 1.2, ease: goldEase, delay: 0.1 }}
@@ -198,12 +198,12 @@ export default function Home() {
       </main>
 
       {/* Desktop Footer Nav: Hidden below 850px */}
-      <nav className="fixed bottom-[40px] left-[40px] hidden min-[851px]:flex flex-col gap-5 z-40">
-        {['About', 'Destinations', 'Booking', 'FAQ'].map((link, i) => (
+      <nav className="fixed bottom-[40px] left-[40px] hidden min-[851px]:flex flex-col gap-3 z-40">
+        {['/About', 'Destinations', 'Booking', 'FAQ', 'Accaunt'].map((link, i) => (
           <motion.a
             key={link}
             href="#"
-            className="text-[13px] tracking-widest font-medium text-[#1c1c1c] opacity-50 hover:opacity-100 transition-all uppercase"
+            className="text-[13px] tracking-widest font-medium text-[#1c1c1c] opacity-50 hover:opacity-100 transition-all "
             initial={{ x: -30, opacity: 0 }}
             animate={introComplete ? { x: 0, opacity: 0.5 } : { x: -30, opacity: 0 }}
             transition={{ duration: 0.8, delay: 1.2 + i * 0.15, ease: goldEase }}

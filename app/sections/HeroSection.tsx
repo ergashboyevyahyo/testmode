@@ -60,7 +60,7 @@ export default function HeroSection() {
               animate={{ scale: 1 }}
               transition={{ duration: 2.2, ease: goldEase }}
             >
-              <Image src="/img5.jpg" alt="Hero" fill sizes="(max-width: 850px) 100vw, 50vw" quality={75} className="object-cover" priority />
+              <Image src="/img5.jpg" alt="Hero" fill className="object-cover" priority />
             </motion.div>
             <div className="absolute inset-0 bg-black/20 md:bg-transparent" />
           </div>
@@ -72,7 +72,7 @@ export default function HeroSection() {
             transition={{ duration: 1.1, delay: 0.5, ease: goldEase }}
           >
             <div className="gem-image-box relative shrink-0 overflow-hidden">
-              <Image src="/img9.jpg" alt="Gem" fill sizes="(max-width: 768px) 40vw, 200px" quality={70} className="object-cover" />
+              <Image src="/img9.jpg" alt="Gem" fill className="object-cover" />
             </div>
             <div className="gem-content gap-[20px]">
               <div className="mb-5 md:mb-0">

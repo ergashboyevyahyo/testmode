@@ -25,8 +25,6 @@ export default function TourDetailSection({ tour }: { tour: Tour }) {
             src={tour.image}
             alt={tour.name}
             fill
-            sizes="100vw"
-            quality={75}
             className="object-cover brightness-90"
             priority
           />
@@ -69,7 +67,7 @@ export default function TourDetailSection({ tour }: { tour: Tour }) {
                 className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-[#f3ebe4] shadow-sm"
                 style={{ marginLeft: i === 0 ? 0 : -12, zIndex: 3 - i }}
               >
-                <Image src={img} alt="friend" fill sizes="36px" quality={60} className="object-cover" />
+                <Image src={img} alt="friend" fill className="object-cover" />
               </div>
             ))}
             <div
@@ -108,8 +106,6 @@ export default function TourDetailSection({ tour }: { tour: Tour }) {
                 src={img}
                 alt={`${tour.name} gallery`}
                 fill
-                sizes="130px"
-                quality={70}
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
             </div>

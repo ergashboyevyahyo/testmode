@@ -36,6 +36,7 @@ export default function DestinationsSection() {
         </motion.div>
 
         <motion.p
+          id='Popular'
           className="text-sm font-medium tracking-widest mb-[15px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.6 }}

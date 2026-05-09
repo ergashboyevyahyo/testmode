@@ -130,9 +130,7 @@ html, body {
   padding: 8px;
 }
 
-/* #searchInput::placeholder {
-  text-align: center;
-} */
+
 
 @media (max-width: 1000px) {
   .gem-image-box {
@@ -208,6 +206,7 @@ html, body {
   #tourcontainer {
     padding: 10px;
     padding-top: 100px;
+    justify-content: center;
   }
   
 }

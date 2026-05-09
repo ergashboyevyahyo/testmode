@@ -35,7 +35,7 @@ export default function TourDetailSection({ tour }: { tour: Tour }) {
       {/* Main Content Card: O'ng tomonda joylashgan (Flex justify-end orqali) */}
       <motion.div
         id='infocard'
-        className="relative z-10 w-full max-w-[400px] bg-[#f3ebe4] rounded-[40px] shadow-2xl overflow-y-auto max-h-[90vh] no-scrollbar sm:gap-6 gap-2 flex flex-col"
+        className="relative z-10 w-full max-w-[400px] bg-[#f3ebe4] rounded-[20px] shadow-2xl overflow-y-auto max-h-[90vh] no-scrollbar sm:gap-6 gap-2 flex flex-col"
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: goldEase }}

@@ -208,5 +208,9 @@ html, body {
     padding-top: 100px;
     justify-content: center;
   }
+
+  #searchInput {
+    margin-bottom: 3rem;
+  }
   
 }

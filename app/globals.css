@@ -34,7 +34,7 @@ html, body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 50px;
+  padding: 30px;
 }
 
 .bg-image-wrapper {
@@ -75,13 +75,13 @@ html, body {
   display: flex;
   gap: 24px;
   width: 100%;
-  max-width: 460px;
+  height: 200px;
   box-shadow: 0 25px 60px -15px rgba(0,0,0,0.15);
 }
 
 .gem-image-box {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 100%;
   border-radius: 20px;
 }
 
@@ -92,8 +92,36 @@ html, body {
   padding: 8px 0;
 }
 
+#explorebtn {
+  padding: 12px 24px;
+}
+
+#footerLink {
+  color: #000;
+}
+
+#footerLink:hover {
+  margin-left: 10px;
+  color: #555;
+}
+
+@media (max-width: 1000px) {
+  .gem-image-box {
+    display: none;
+  }
+
+  .gem-content p {
+    font-size: 15px;
+  }
+}
+
 /* 850px Responsive Overrides */
 @media (max-width: 850px) {
+  #topContent {
+    padding: 6px;
+    gap: 10px;
+  }
+
   .left-bg, .text-black-side {
     display: none;
   }
@@ -114,7 +142,7 @@ html, body {
     max-width: 100%;
     flex-direction: column;
     border-radius: 40px 40px 0 0;
-    padding: 40px 32px 50px 32px; /* Pastki qismda joy qoldirdik */
+    padding: 24px; /* Pastki qismda joy qoldirdik */
     gap: 15px;
     position: fixed;
     bottom: 0;
@@ -130,5 +158,9 @@ html, body {
   .gem-content {
     width: 100%;
     text-align: left;
+  }
+
+  .gem-content p {
+    font-size: 12px;
   }
 }

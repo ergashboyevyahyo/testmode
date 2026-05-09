@@ -66,6 +66,8 @@ export default function DestinationsSection() {
                     src={tour.image}
                     alt={tour.name}
                     fill
+                    sizes="(max-width: 768px) 50vw, 340px"
+                    quality={75}
                     className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                 </div>

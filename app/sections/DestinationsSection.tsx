@@ -38,7 +38,6 @@ export default function DestinationsSection() {
               onChange={e => setQuery(e.target.value)}
               placeholder="Find your tour"
               className="w-100 max-w-2xl bg-transparent text-[clamp(24px,4vw,42px)] font-light tracking-[-0.02em] outline-none placeholder-black/20 caret-black/40 text-center"
-              autoFocus
             />
           </div>
         </motion.div>

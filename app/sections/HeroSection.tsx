@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const goldEase = [0.76, 0, 0.24, 1] as const
 
@@ -81,12 +82,13 @@ export default function HeroSection() {
                   where nature meets comfort in perfect harmony.
                 </p>
               </div>
-              <button
+              <Link
                 id="explorebtn"
+                href="/destinations"
                 className="bg-black text-white px-8 py-4 md:px-5 md:py-2.5 rounded-full text-xs flex items-center gap-2 self-start hover:bg-zinc-800 transition-all duration-300 active:scale-95 cursor-pointer"
               >
                 Explore more <ArrowRight size={14} />
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

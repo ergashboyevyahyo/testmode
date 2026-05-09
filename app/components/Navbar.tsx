@@ -38,7 +38,7 @@ export default function Navbar() {
             ? 'text-black'
             : isHome || isTourDetail
             ? 'text-white'
-            : 'max-[850px]:text-white min-[851px]:text-black'
+            : 'text-black'
         }`}
         style={{ top: 30, left: 30 }}
       >

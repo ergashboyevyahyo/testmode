@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Travel — Discover the World",
@@ -20,6 +21,7 @@ export default function RootLayout({
         />
       </head>
       <body className="h-full antialiased" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <Navbar />
         {children}
       </body>
     </html>

@@ -10,8 +10,11 @@
 html, body {
   height: 100%;
   background-color: #f3ebe4;
-  overflow: hidden;
-  font-family: 'Inter', system-ui, sans-serif; /* Siliq font tavsiya etiladi */
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.destinations-page {
+  overflow-y: auto;
 }
 
 .hero-container {
@@ -96,14 +99,40 @@ html, body {
   padding: 12px 24px;
 }
 
-#footerLink {
+.footerLink {
   color: #000;
 }
 
-#footerLink:hover {
+.footerLink:hover {
   margin-left: 10px;
   color: #555;
 }
+
+#destcontainer {
+  padding: 30px;
+  padding-top: 100px;
+}
+
+#Popular {
+  margin-bottom: 1rem;
+}
+
+#infocard{
+  padding: 24px;
+  gap: 24px;
+}
+
+#tourcontainer {
+  padding: 30px;
+}
+
+#bookbtn {
+  padding: 8px;
+}
+
+/* #searchInput::placeholder {
+  text-align: center;
+} */
 
 @media (max-width: 1000px) {
   .gem-image-box {
@@ -112,6 +141,11 @@ html, body {
 
   .gem-content p {
     font-size: 15px;
+  }
+
+  #destcontainer {
+    padding: 20px;
+    padding-top: 80px;
   }
 }
 
@@ -162,5 +196,17 @@ html, body {
 
   .gem-content p {
     font-size: 12px;
+  }
+
+  #destcontainer {
+    padding: 10px;
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  #tourcontainer {
+    padding: 10px;
+    padding-top: 100px;
   }
 }

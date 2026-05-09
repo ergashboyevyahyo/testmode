@@ -9,11 +9,11 @@ import Link from 'next/link'
 const goldEase = [0.76, 0, 0.24, 1] as const
 
 const desktopLinks = [
-  { label: 'About',       href: '/' },
+  { label: 'About',        href: '/' },
   { label: 'Destinations', href: '/destinations' },
   { label: 'Booking',      href: '/booking' },
   { label: 'FAQ',          href: '/faq' },
-  { label: 'Accaunt',      href: '/account' },
+  { label: 'Account',      href: '/account' },
 ]
 
 const mobileLinks = [
@@ -29,25 +29,23 @@ export default function Navbar() {
   const isHome = pathname === '/'
   const isTourDetail = pathname.startsWith('/destinations/') && pathname !== '/destinations'
 
+  const starColor = menuOpen
+    ? 'text-black'
+    : isTourDetail
+    ? 'text-white'
+    : isHome
+    ? 'max-[850px]:text-white min-[851px]:text-black'
+    : 'text-black'
+
   return (
     <>
-      {/* Star Icon */}
       <div
-        className={`fixed z-1001 transition-colors duration-500 ${
-          menuOpen
-            ? 'text-black'
-            : isTourDetail
-            ? 'text-white'
-            : isHome
-            ? 'max-[850px]:text-white min-[851px]:text-black'
-            : 'text-black'
-        }`}
+        className={`fixed z-1001 transition-colors duration-500 ${starColor}`}
         style={{ top: 30, left: 30 }}
       >
         <Star size={30} fill="currentColor" strokeWidth={0} />
       </div>
 
-      {/* Hamburger */}
       <button
         onClick={() => setMenuOpen(true)}
         className={`fixed top-7.5 right-7.5 z-300 cursor-pointer hover:scale-110 transition-transform duration-300 ease-out ${
@@ -57,7 +55,6 @@ export default function Navbar() {
         <Menu size={32} />
       </button>
 
-      {/* Menu Modal */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -100,7 +97,6 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Desktop Bottom Nav */}
       <nav className={`fixed bottom-10 left-10 hidden z-40 flex-col gap-1 ${isTourDetail ? '' : 'min-[851px]:flex'}`}>
         {desktopLinks.map((link, i) => {
           const isActive = pathname === link.href

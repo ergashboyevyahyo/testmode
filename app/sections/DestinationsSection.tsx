@@ -16,36 +16,27 @@ export default function DestinationsSection() {
   )
 
   return (
-    <div className="bg-[#f3ebe4] min-h-screen font-sans selection:bg-black selection:text-white destinations-page">
-      {/* 
-        Responsive Padding: Mobileda 6px, Desktopda 30px.
-        Topdan 100px margin-top bilan joy tashladik.
-      */}
-      <div id='destcontainer' className="transition-all duration-500">
+    <div className="bg-[#f3ebe4] min-h-screen font-sans selection:bg-black selection:text-white">
+      <div id="destcontainer" className="transition-all duration-500">
 
-        {/* Search bar: Border yo'q, text centered va size kichraytirildi */}
         <motion.div
           className="flex justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: goldEase }}
         >
-          <div className='w-full flex items-center justify-center'>
-            <input
-            id='searchInput'
-              type="text"
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              placeholder="Find your tour"
-              className="w-100 max-w-2xl bg-transparent text-[clamp(24px,4vw,42px)] font-light tracking-[-0.02em] outline-none placeholder-black/20 caret-black/40 text-center"
-            />
-          </div>
+          <input
+            id="searchInput"
+            type="text"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            placeholder="Find your tour"
+            className="w-full max-w-2xl bg-transparent text-[clamp(24px,4vw,42px)] font-light tracking-[-0.02em] outline-none placeholder-black/20 caret-black/40 text-center"
+          />
         </motion.div>
 
-        {/* Popular label: Cardlar bilan orasi 15px */}
         <motion.p
-          id='Popular'
-          className="text-sm font-medium tracking-widest mb-[15px] opacity-60]"
+          className="text-sm font-medium tracking-widest mb-[15px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.6 }}
           transition={{ duration: 0.6, delay: 0.2, ease: goldEase }}
@@ -53,8 +44,7 @@ export default function DestinationsSection() {
           Popular
         </motion.p>
 
-        {/* Cards: Sening original width/height mantiqing saqlanib qoldi */}
-        <div className="flex gap-5 overflow-x-auto pb-6 no-scrollbar" style={{ scrollbarWidth: 'none' }}>
+        <div className="flex gap-5 overflow-x-auto pb-6 no-scrollbar">
           {filtered.length === 0 && (
             <p className="text-black/40 text-sm pt-4">No tours found for &quot;{query}&quot;</p>
           )}
@@ -90,9 +80,8 @@ export default function DestinationsSection() {
       </div>
 
       <style jsx global>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
     </div>
   )

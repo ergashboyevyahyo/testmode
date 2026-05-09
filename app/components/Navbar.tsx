@@ -34,7 +34,13 @@ export default function Navbar() {
       {/* Star Icon */}
       <div
         className={`fixed z-1001 transition-colors duration-500 ${
-          !menuOpen && isTourDetail ? 'text-white' : 'text-black'
+          menuOpen
+            ? 'text-black'
+            : isTourDetail
+            ? 'text-white'
+            : isHome
+            ? 'max-[850px]:text-white min-[851px]:text-black'
+            : 'text-black'
         }`}
         style={{ top: 30, left: 30 }}
       >
